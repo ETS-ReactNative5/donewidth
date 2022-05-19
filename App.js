@@ -1,33 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet,  View } from "react-native";
+import AppButton from "./app/components/AppButton";
+import AppText from "./app/components/AppText";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View
-        style={{
-          backgroundColor: 'dodgerblue',
-          width: 100,
-          height: 100,
-          shadowColor: 'grey',
-          shadowOffset: { width: 0, height: 10 },
-          shadowOpacity: 1,
-          shadowRadius: 10,
-          elevation: 90,
-          paddingHorizontal: 10,
-        }}
-      >
-        <Text>Bleu Box</Text>
-      </View>
-    </View>
+   
+      <WelcomeScreen/>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
