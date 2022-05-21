@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 18,
     textTransform: "uppercase",
-    fontEWeight: "bold",
+    fontWeight: "bold",
   },
 });
 export default AppButton;
