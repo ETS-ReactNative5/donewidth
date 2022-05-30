@@ -1,30 +1,23 @@
-import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  Platform,
-  StatusBar,
-  StyleSheet,
-  FlatList,
-  View,
-} from 'react-native';
+import React, { useState } from "react";
+import { StyleSheet, FlatList } from "react-native";
 
-import ListItem from '../components/ListItem';
-import ListItemDeleteAction from '../components/ListItemDeleteAction';
-import ListItemSeperator from '../components/ListItemSeperator';
-import Screen from '../components/Screen';
+import ListItem from "../components/ListItem";
+import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import ListItemSeperator from "../components/ListItemSeperator";
+import Screen from "../components/Screen";
 
 const initialMessages = [
   {
     id: 1,
-    title: 'T1',
-    description: 'D1',
-    image: require('../assets/bahani-yellow.png'),
+    title: "T1",
+    description: "D1",
+    image: require("../assets/bahani-yellow.png"),
   },
   {
     id: 2,
-    title: 'T2',
-    description: 'D2',
-    image: require('../assets/bahani-red.png'),
+    title: "T2",
+    description: "D2",
+    image: require("../assets/bahani-red.png"),
   },
 ];
 
@@ -48,7 +41,7 @@ function MessagesScreen() {
             title={item.title}
             subTitle={item.description}
             image={item.image}
-            onPress={() => console.log('Message selected', item)}
+            onPress={() => console.log("Message selected", item)}
             renderRightActions={() => (
               <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}
@@ -60,9 +53,9 @@ function MessagesScreen() {
           setMessages([
             {
               id: 2,
-              title: 'T2',
-              description: 'D2',
-              image: require('../assets/bahani-red.png'),
+              title: "T2",
+              description: "D2",
+              image: require("../assets/bahani-red.png"),
             },
           ]);
         }}
